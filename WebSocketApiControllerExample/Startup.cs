@@ -18,8 +18,9 @@ namespace WebSocketApiControllerExample
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionFactory = new ConnectionFactory();
+            var connectionManager = new ConnectionManager();
             services.AddMvc().AddControllersAsServices();
-            services.AddScoped(ctx => new WebSocketApiController(connectionFactory));
+            services.AddScoped(ctx => new WebSocketApiController(connectionFactory, connectionManager));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

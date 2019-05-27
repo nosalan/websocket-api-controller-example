@@ -35,7 +35,7 @@ namespace WebSocketApiControllerExample
                     {
                         var receivedMessage = Encoding.UTF8.GetString(memoryStream.ToArray());
                         Console.WriteLine($"Received message {receivedMessage}");
-                        await Send("Echo: " + receivedMessage);
+                        await Send(receivedMessage);
                     }
                 }
             } while (message.MessageType != WebSocketMessageType.Close);
@@ -66,7 +66,7 @@ namespace WebSocketApiControllerExample
 
         public async Task Close()
         {
-            await _webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "", CancellationToken.None);
+            await _webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
         }
     }
 }
