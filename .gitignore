@@ -37,5 +37,6 @@ msbuild.wrn
 .vs/
 
 # NCrunch
-*.ncrunch*
 _NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
