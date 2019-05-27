@@ -8,7 +8,7 @@ This is an excerpt from the controller class:
 
 
 
-```
+```c#
     [Route("/api/ws")]
     [ApiController]
     public class WebSocketApiController : ControllerBase
