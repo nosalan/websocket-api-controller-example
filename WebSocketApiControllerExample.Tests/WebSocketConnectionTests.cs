@@ -5,8 +5,6 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using AutoFixture;
-using Microsoft.EntityFrameworkCore;
 using NSubstitute;
 using NUnit.Framework;
 
